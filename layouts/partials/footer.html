@@ -1,0 +1,23 @@
+<footer class="footer">
+    {{ if (.Site.Params.footNote) }} 
+    <section class="container">
+        <p>Note</p>
+        {{ with .Site.Params.footNote }}
+        <small>{{ . }}</small>
+        {{ end }}
+    </section>
+    {{ end }}
+  <section class="container">
+    ©
+    {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }}
+      {{ .Site.Params.since }} -
+    {{ end }}
+    {{ now.Year }}
+    {{ if (.Site.Params.authorUrl) }}
+        <a href="{{ .Site.Params.authorUrl }}" target="_blank">{{ with .Site.Params.author }} {{ . }} {{ end }}</a>
+    {{ else }}
+        {{ with .Site.Params.author }} {{ . }} {{ end }}
+    {{ end }}
+    ·
+  </section>
+</footer>
