@@ -106,7 +106,7 @@
 
     {{ if (isset .Site.Params "homebackground") }}
         {{ with .Site.Params.homeBackground }}
-        <main class="wrapper" style="background-image:url({{ . | relURL }});">
+        <main class="wrapper" style="background-image:url({{ . | relURL }}); background-repeat:no-repeat; background-size:cover;">
         {{ end }}
     {{ else }}
         <main class="wrapper">

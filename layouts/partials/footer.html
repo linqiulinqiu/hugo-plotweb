@@ -1,7 +1,9 @@
 <footer class="footer">
     {{ if (.Site.Params.footNote) }} 
     <section class="container">
-        <p>Note</p>
+        {{ if (.Site.Params.footNoteTitle) }}
+        <p>{{ .Site.Params.footNoteTitle }}</p>
+        {{ end }}
         {{ with .Site.Params.footNote }}
         <small>{{ . }}</small>
         {{ end }}
