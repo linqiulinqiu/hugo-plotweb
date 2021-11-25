@@ -5,11 +5,16 @@
     <div class="avatar"><img src="{{ . | relURL }}" alt="avatar"></div>
     {{ end }}
     {{ end }}
-    <h1>{{ .Site.Params.author }}</h1>
+    <h1>{{ .Site.Params.title }}</h1>
     {{ if reflect.IsSlice .Site.Params.info }}
     <h2>{{ range .Site.Params.info }}{{.}}<br>{{ end}}</h2>
     {{ else }}
     <h2>{{ .Site.Params.info }}</h2>
+    {{ end }}
+    {{ if .Site.Params.launchButton }}
+    {{ with .Site.Params.launchButton }}
+    <button><a href="{{ .url }}" target="{{ .target }}">{{ .caption }}</a></button>
+    {{ end }}
     {{ end }}
     {{ with .Site.Params.social }}
     <ul>
