@@ -44,6 +44,26 @@
           }
         }
       }
+
+      .launchButton{
+        background: url("/images/buttonbg.png") repeat center;
+        color: #668b66;
+        width: 15em;
+        height: 3em;
+        font-size: large;
+        margin-top: 1em;
+        border: none;
+        border-radius: 1em;
+        a{
+          color: #668b66;
+          text-decoration: none
+        }
+      }
+      .launchButton:hover{
+        a{
+          color: #000
+        }
+      }
     }
   }
 }

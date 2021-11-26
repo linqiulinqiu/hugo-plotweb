@@ -11,9 +11,10 @@
     {{ else }}
     <h2>{{ .Site.Params.info }}</h2>
     {{ end }}
-    {{ if .Site.Params.launchButton }}
-    {{ with .Site.Params.launchButton }}
-    <a href="{{ .url }}" target="{{ .target }}"><button>{{ .caption }}</button></a>
+    {{ if .Site.Params.launchButton_caption }}
+    {{ with .Site.Params }}
+    <button class="launchButton">
+      <a href="{{ .launchButton_url }}" target="{{ .launchButton_target }}">{{ .launchButton_caption }}</a></button>
     {{ end }}
     {{ end }}
     {{ with .Site.Params.social }}
