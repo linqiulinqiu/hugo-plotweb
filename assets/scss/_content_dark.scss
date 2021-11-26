@@ -46,22 +46,22 @@
       }
 
       .launchButton{
-        background: url("/images/buttonbg.png") repeat center;
+        background: url("/images/buttonbg.gif") no-repeat center;
         color: #668b66;
         width: 15em;
-        height: 3em;
+        height: 5em;
         font-size: large;
         margin-top: 1em;
         border: none;
-        border-radius: 1em;
+        border-radius: 3em;
         a{
-          color: #668b66;
+          color: #d1fcd1;
           text-decoration: none
         }
       }
       .launchButton:hover{
         a{
-          color: #000
+          color: #fff
         }
       }
     }
