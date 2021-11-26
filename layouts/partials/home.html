@@ -13,7 +13,7 @@
     {{ end }}
     {{ if .Site.Params.launchButton }}
     {{ with .Site.Params.launchButton }}
-    <button><a href="{{ .url }}" target="{{ .target }}">{{ .caption }}</a></button>
+    <a href="{{ .url }}" target="{{ .target }}"><button>{{ .caption }}</button></a>
     {{ end }}
     {{ end }}
     {{ with .Site.Params.social }}
